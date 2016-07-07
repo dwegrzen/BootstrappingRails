@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>How tired are you today?</h1>
+      <p>So you want find a place to crash for a few minutes?</p>
+      <h4><small> Here is a place we can help find for you:</small> <%= params[:location].titleize%></h4>
+      <%= image_tag params[:location], class: 'img-rounded nappic' %>
+      <p> <%= @sleepy %></p>
+    </div>
+  </div>
+</div>

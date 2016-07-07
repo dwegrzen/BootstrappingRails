@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  root 'primary#index'
+
+  get 'party/:venue' => 'primary#partytime', as: :partytime
+  get 'rest/:location' => 'secondary#naptime', as: :naptime
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

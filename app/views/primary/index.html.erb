@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Location Station</h1>
+      <h6>We'll find the place you want</h6>
+    </div>
+    <div class="col-md-3 sidebar">
+        <ul class=" nav nav-sidebar">
+          <li>Party Locations</li>
+          <% @partyvenues.each do |venys| %>
+          <li ><%= link_to "#{venys.titleize}",
+            partytime_path(venue: venys)
+            %></li>
+          <% end %>
+          <li>Naptime Locations</li>
+    <% @napspots.each do |spots| %>
+      <li><%= link_to "#{spots.titleize}",
+        naptime_path(location: spots)%></li>
+    <% end %>
+    </div>
+    <div class="col-md-9">
+      <%= image_tag "homepage", class: 'img-rounded img-responsive home' %>
+      <h5 class="text-center">These people are having a party</h5>
+    </div>
+  </div>
+</div>
